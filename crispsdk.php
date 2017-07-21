@@ -2,7 +2,6 @@
 
 namespace richbarrett\crispsdk;
 
-require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/src/client.php';
 require __DIR__ . '/src/request.php';
 
