@@ -1,0 +1,23 @@
+{
+	"name": "richbarrett/crisp-php-sdk",
+	"homepage": "https://github.com/richbarrett7/crisp-php-sdk",
+	"description": "PHP SDK for the Crisp.im API",
+	"license": "MIT",
+	"keywords": ["crisp","sdk","php","chat","api"],
+  "version": "1.0",
+	"authors": [
+	{
+		"name": "Richard Barrett",
+		"email": "rbarrett1@gmail.com"
+	}
+	],
+	"require": {
+      "nategood/httpful": "^0.2.20",
+      "php": ">=5.6.0"
+  },
+	"autoload": {
+		"classmap": [
+		"crispsdk.php"
+		]
+	}
+}
