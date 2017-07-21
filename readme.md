@@ -3,7 +3,7 @@
 ## Overview
 This was created as a lightweight PHP SDK for Crisp.im.
 
-It does not contain methods foe every API call but is very easy to extend by adding methods to `crispsdk.php` it uses Httpful to make requests to the API and returns an array with quick access to key data and the raw `Httpful\Response` object so you can handle the result however you like.
+It does not contain methods for every API call but is very easy to extend by adding methods to `crispsdk.php` it uses Httpful to make requests to the API and returns an array with quick access to key data and the raw `Httpful\Response` object so you can handle the result however you like.
 
 ## Usage
 
