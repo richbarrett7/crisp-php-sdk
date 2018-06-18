@@ -20,12 +20,11 @@ class client {
   
   function sendRequest($method, $uri, $payload='', $headers=array()) {
     
-    
     $headers = array_merge($headers, $this->headers);
     $url = rtrim($this->url,'/').'/'.ltrim($uri,'/');
     
     $method = strtoupper($method);
-    if(!in_array($method, [ 'GET','POST','PUT','PATCH' ])) throw new \Exception('Unknown method "'.$method.'"');
+    if(!in_array($method, [ 'GET','POST','PUT','PATCH','DELETE' ])) throw new \Exception('Unknown method "'.$method.'"');
     
     // Create the request and set some basic parameters
     $request = \Httpful\Request::$method($url);
@@ -37,9 +36,7 @@ class client {
       if(is_array($payload)) $payload = json_encode($payload);
       if(strlen($payload) > 0) $request->body($payload);
     }
-    
-    //print_r($request);exit;
-    
+        
     $response = $request->send();
     $ret['code'] = $response->code;
     $ret['body'] = $response->body->data;

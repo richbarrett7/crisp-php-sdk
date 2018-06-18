@@ -80,6 +80,16 @@ class crispsdk {
     
   }
   
+  function deleteUserProfile($website_id, $user_id) {
+    
+    $request = new request($this->client);
+    $request->method = 'delete';
+    $request->uri = '/website/'.$website_id.'/people/profile/'.$user_id;
+    return $request->send();
+    
+  }
+  
+  
   
 }
 
